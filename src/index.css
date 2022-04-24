@@ -12,4 +12,7 @@
         @apply py-1 px-5 rounded-full;
         @apply cursor-pointer;
     }
+    input{
+        @apply p-2 border-2 border-[#182848] ml-1 rounded-lg;
+    }
 }

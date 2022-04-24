@@ -1,9 +1,9 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Skills from './components/Skills'
-import Work from './components/Work'
-import Comment from './components/Comment'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Skills from './components/Skills';
+import Work from './components/Work';
+import CommentTemplate from './components/CommentTemplate';
 
 const App = () => {
   return (
@@ -12,9 +12,9 @@ const App = () => {
       <Home />
       <Skills />
       <Work />
-      <Comment />
+      <CommentTemplate />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
