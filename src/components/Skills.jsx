@@ -20,35 +20,35 @@ const Skills = () => {
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 justify-center items-center ">
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={HTML} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white">HTML</p>
+            <p className="text-lg mt-2 text-white cursor-default">HTML</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={CSS} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white">CSS</p>
+            <p className="text-lg mt-2 text-white cursor-default">CSS</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={JavaScript} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white">JavaScript</p>
+            <p className="text-lg mt-2 text-white cursor-default">JavaScript</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={ReactImg} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white">React</p>
+            <p className="text-lg mt-2 text-white cursor-default">React</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={Github} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white">Github</p>
+            <p className="text-lg mt-2 text-white cursor-default">Github</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={Tailwind} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white">Tailwindcss</p>
+            <p className="text-lg mt-2 text-white cursor-default">Tailwindcss</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={NodeJS} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white">NodeJS</p>
+            <p className="text-lg mt-2 text-white cursor-default">NodeJS</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={MongoDB} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white">MongoDB</p>
+            <p className="text-lg mt-2 text-white cursor-default">MongoDB</p>
           </div>
         </div>
       </div>

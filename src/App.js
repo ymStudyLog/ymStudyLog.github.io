@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Skills from './components/Skills';
 import Work from './components/Work';
-import CommentTemplate from './components/CommentTemplate';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <Home />
       <Skills />
       <Work />
-      <CommentTemplate />
+      <Contact />
     </div>
   );
 };
