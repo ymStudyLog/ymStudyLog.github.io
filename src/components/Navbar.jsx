@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-scroll';
-import TopButton from '../lib/TopButton';
-import { HiOutlineMail } from 'react-icons/hi';
+import TopButton from './common/TopButton';
+//import { HiOutlineMail } from 'react-icons/hi';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -85,6 +85,7 @@ const Navbar = () => {
               Github <FaGithub />
             </a>
           </li>
+          {/* 
           <li className="w-[180px] h-[50px] rounded-tl-none rounded-bl-none text-2xl flex text-white bg-[#182848] ml-[-120px] hover:ml-[-10px] duration-500 mt-2">
             <button
               onClick={() => console.log('email-link-popup')}
@@ -93,6 +94,7 @@ const Navbar = () => {
               Email <HiOutlineMail />
             </button>
           </li>
+          */}
         </ul>
       </div>
 

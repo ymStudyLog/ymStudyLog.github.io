@@ -17,3 +17,19 @@
         @apply p-2 border-2 border-[#182848] ml-1 rounded-lg;
     }
 }
+
+.project-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 500px;
+    min-height: 240px;
+}
+
+.project-img:hover{
+    background-image: linear-gradient(
+        to right,
+        rgba(24,40,72, 0.8),
+        rgba(24,40,72, 0.9)
+    ) !important;
+}
+
