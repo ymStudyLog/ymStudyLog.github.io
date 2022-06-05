@@ -72,6 +72,11 @@ const Navbar = () => {
             Contact
           </li>
         </Link>
+        <button className="rounded-full flex items-center m-4 hover:scale-125 duration-150">
+          <a href="https://github.com/ymStudyLog">
+            <FaGithub size={35} />
+          </a>
+        </button>
       </ul>
 
       {/* side button */}

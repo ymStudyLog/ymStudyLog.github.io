@@ -4,11 +4,12 @@ const Contact = () => {
   return (
     <div name="contact" className="w-full h-screen">
       <div className="max-w-[600px] h-full mx-auto flex flex-col justify-center items-center">
-        
         {/* contact form */}
         <div>
-          <div className='mb-4'>
-          <h1 className="text-4xl font-bold border-b-4 border-[#182848] inline">Contact</h1>
+          <div className="mb-4">
+            <h1 className="text-4xl font-bold border-b-4 border-[#182848] inline">
+              Contact
+            </h1>
           </div>
           <form
             method="POST"
@@ -36,9 +37,7 @@ const Contact = () => {
               placeholder="의견을 자유롭게 보내주세요. / Please send your message"
               className="p-2 border-2 border-[#182848] rounded-lg col-span-3 resize-none"
             />
-            <button
-              className="p-2 font-bold border-2 rounded-lg border-[#182848] bg-[#182848] text-white col-end-4"
-            >
+            <button className="p-2 font-bold border-2 rounded-lg border-[#182848] bg-[#182848] text-white col-end-4">
               submit
             </button>
           </form>

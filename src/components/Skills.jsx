@@ -40,7 +40,9 @@ const Skills = () => {
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={Tailwind} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">Tailwindcss</p>
+            <p className="text-lg mt-2 text-white cursor-default">
+              Tailwindcss
+            </p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
             <img src={NodeJS} alt="HTML img" className="w-[50px] mx-auto" />
