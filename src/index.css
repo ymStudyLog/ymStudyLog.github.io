@@ -21,8 +21,8 @@
 .project-img{
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 500px;
-    min-height: 240px;
+    min-width: 450px;
+    min-height: 200px;
 }
 
 .project-img:hover{

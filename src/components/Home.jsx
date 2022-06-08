@@ -24,15 +24,15 @@ const Home = () => {
     <div name="home" className="w-full h-screen">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col h-full justify-center items-center">
-        <h1 className="text-2xl">
+        <h1 className="text-2xl card:text-lg">
           Aim to build simple applications and deliver a better experience
         </h1>
-        <h1 className="my-3 text-4xl font-bold">
+        <h1 className="my-3 text-4xl font-bold card:text-2xl">
           프론트엔드 개발자 이유미의 포트폴리오입니다.
         </h1>
         <div className="text-xl flex items-center mt-3">
           <HiOutlineMail size={30} className="mr-2 sm:m-0" />
-          <span className="hidden sm:inline mr-2 ml-2">ylee585@gmail.com</span>
+          <span className="hidden mobile-extra:inline mr-2 ml-2">ylee585@gmail.com</span>
           <FiCopy
             className="cursor-pointer mr-2"
             onClick={() => {

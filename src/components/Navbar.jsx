@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
 
       {/* menu */}
-      <ul className="hidden md:flex text-2xl">
+      <ul className="hidden tablet:flex text-2xl">
         <Link to="home" smooth={true} duration={500}>
           <li className="mx-2 hover:border-[#182848] hover:bg-[#182848] hover:text-white duration-150">
             Home
@@ -40,7 +40,7 @@ const Navbar = () => {
       </ul>
 
       {/* Hamburger & close */}
-      <div onClick={onhandleClick} className="md:hidden cursor-pointer z-10">
+      <div onClick={onhandleClick} className="tablet:hidden cursor-pointer z-10">
         {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
 
@@ -80,7 +80,7 @@ const Navbar = () => {
       </ul>
 
       {/* side button */}
-      <div className="hidden md:flex fixed left-0 top-[50%] flex-col ">
+      <div className="hidden tablet:flex fixed left-0 top-[50%] flex-col ">
         <ul>
           <li className="w-[180px] h-[50px] rounded-tl-none rounded-bl-none text-2xl flex text-white bg-[#182848] ml-[-120px] hover:ml-[-10px] duration-500">
             <a

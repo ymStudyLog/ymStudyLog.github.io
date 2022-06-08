@@ -17,40 +17,40 @@ const Skills = () => {
         </div>
 
         {/* images */}
-        <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 justify-center items-center ">
+        <div className="mt-5 grid grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-4 gap-5 justify-center items-center ">
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
-            <img src={HTML} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">HTML</p>
+            <img src={HTML} alt="HTML img" className="w-[50px] mx-auto card:w-[30px]" />
+            <p className="text-lg mt-2 text-white cursor-default card:text-sm">HTML</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
-            <img src={CSS} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">CSS</p>
+            <img src={CSS} alt="HTML img" className="w-[50px] mx-auto card:w-[30px]" />
+            <p className="text-lg mt-2 text-white cursor-default card:text-sm">CSS</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
-            <img src={JavaScript} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">JavaScript</p>
+            <img src={JavaScript} alt="HTML img" className="w-[50px] mx-auto card:w-[30px]" />
+            <p className="text-lg mt-2 text-white cursor-default card:text-sm">JavaScript</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
-            <img src={ReactImg} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">React</p>
+            <img src={ReactImg} alt="HTML img" className="w-[50px] mx-auto card:w-[30px]" />
+            <p className="text-lg mt-2 text-white cursor-default card:text-sm">React</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
-            <img src={Github} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">Github</p>
+            <img src={Github} alt="HTML img" className="w-[50px] mx-auto card:w-[30px]" />
+            <p className="text-lg mt-2 text-white cursor-default card:text-sm">Github</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
-            <img src={Tailwind} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">
+            <img src={Tailwind} alt="HTML img" className="w-[50px] mx-auto card:w-[30px]" />
+            <p className="text-lg mt-2 text-white cursor-default card:text-sm">
               Tailwindcss
             </p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
-            <img src={NodeJS} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">NodeJS</p>
+            <img src={NodeJS} alt="HTML img" className="w-[50px] mx-auto card:w-[30px]" />
+            <p className="text-lg mt-2 text-white cursor-default card:text-sm">NodeJS</p>
           </div>
           <div className="text-center py-4 px-6 rounded-2xl shadow-xl bg-[#182848] hover:scale-110 duration-150">
-            <img src={MongoDB} alt="HTML img" className="w-[50px] mx-auto" />
-            <p className="text-lg mt-2 text-white cursor-default">MongoDB</p>
+            <img src={MongoDB} alt="HTML img" className="w-[50px] mx-auto card:w-[30px]" />
+            <p className="text-lg mt-2 text-white cursor-default card:text-sm">MongoDB</p>
           </div>
         </div>
       </div>

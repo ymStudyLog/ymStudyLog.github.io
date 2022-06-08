@@ -5,7 +5,7 @@ const Contact = () => {
     <div name="contact" className="w-full h-screen">
       <div className="max-w-[600px] h-full mx-auto flex flex-col justify-center items-center">
         {/* contact form */}
-        <div>
+        <div className='special:max-w-[280px]'>
           <div className="mb-4">
             <h1 className="text-4xl font-bold border-b-4 border-[#182848] inline">
               Contact
@@ -14,7 +14,7 @@ const Contact = () => {
           <form
             method="POST"
             action="https://getform.io/f/3152d1b8-5d0a-463b-b4b8-b3455fd0cc23"
-            className="flex flex-col sm:grid sm:grid-cols-3 gap-1 "
+            className="flex flex-col tablet:grid tablet:grid-cols-3 gap-1 "
           >
             <input
               type="text"
