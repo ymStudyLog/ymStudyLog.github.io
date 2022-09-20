@@ -16,15 +16,15 @@ const Work = () => {
             className="group container hidden tablet:min-w-[650px] tablet:min-h-[335px] mobile-extra:flex justify-center items-center flex-col project-img"
           >
             <div className="grid grid-cols-1 gap-5">
-              <a
+              {/*<a
                 href="http://52.78.78.39:4000/"
                 target="_blank"
                 rel="noreferrer"
-              >
-                <button className="opacity-0 group-hover:opacity-100 flex items-center p-4 text-xl font-bold rounded-full text-[#182848] bg-white">
+              >*/}
+                <button className="opacity-0 group-hover:opacity-100 flex items-center p-4 text-xl font-bold rounded-full text-[#182848] bg-white" disabled>
                   Go to the page &nbsp;&nbsp; <HiLink />
                 </button>
-              </a>
+              {/*</a>*/}
               <a href="https://github.com/ymStudyLog/movie_2021_front">
                 <button className="opacity-0 group-hover:opacity-100 flex items-center p-4 text-xl font-bold rounded-full text-[#182848] bg-white">
                   View the code &nbsp;&nbsp; <HiOutlineCode />
@@ -34,7 +34,7 @@ const Work = () => {
           </div>
 
           <h1 className="text-lg font-bold p-1">
-            First project : movieapp - 영화 평점 웹서비스(넷플릭스 UI 모방)
+            First project : movieapp - 영화 평점 웹서비스(넷플릭스 UI 모방) <p className='text-red-500'>배포 중단 방문 불가</p>
           </h1>
           <p className='p-1'>Skills : React.js, Redux, MongoDB, Node.js, styled-components</p>
           <p className='p-1'>Deploy: AWS EC2</p>
