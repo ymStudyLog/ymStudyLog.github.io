@@ -10,7 +10,7 @@
         @apply cursor-default;
     }
     li{
-        @apply py-1 px-5 rounded-full;
+        @apply py-2 px-4 rounded-full;
         @apply cursor-pointer;
     }
     input{
@@ -32,4 +32,3 @@
         rgba(24,40,72, 0.9)
     ) !important;
 }
-

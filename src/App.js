@@ -1,19 +1,16 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Skills from './components/Skills';
-import Work from './components/Work';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Comment from './pages/Comment';
+import DefaultLayout from './layout/DefaultLayout';
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
+    <DefaultLayout>
       <Home />
-      <Skills />
-      <Work />
-      <Contact />
-    </div>
+      <Projects />
+      <Comment />
+    </DefaultLayout>
   );
 };
 

@@ -1,0 +1,73 @@
+import React from 'react';
+import { Link } from 'react-scroll';
+import { FaMicroblog } from 'react-icons/fa';
+import {
+  BsCheck2,
+  BsDownload,
+  BsEnvelope,
+} from 'react-icons/bs';
+
+const Home = () => {
+  const [copy, setCopy] = React.useState(false);
+  const onhandleClick = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopy(true);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setCopy(false);
+    }, 2000);
+  }, [copy]);
+
+  return (
+    <div name="home" className="w-full h-screen">
+      <div className="max-w-[1000px] h-full mx-auto flex flex-col justify-center items-center">
+        <h1 className="text-2xl card:text-lg">
+          Aim to build simple applications and to deliver a better experience
+        </h1>
+        <h1 className="my-3 text-4xl font-bold card:text-2xl">
+          React 개발자 이유미의 포트폴리오입니다.
+        </h1>
+
+        <div className="text-xl flex items-center mt-3">
+          <BsEnvelope size={30} />
+          <span className="hidden mobile-extra:inline mr-3 ml-3 sm:m-0">
+            ylee585@gmail.com
+          </span>
+          <BsDownload
+            className="cursor-pointer ml-2 mobile-extra:ml-0"
+            onClick={() => {
+              onhandleClick('ylee585@gmail.com');
+            }}
+          />
+          {copy && <BsCheck2 size={30} className="ml-3 text-green-500" />}
+        </div>
+
+        <a href="https://velog.io/@zldzhd9292" className="mt-3">
+          <div className="text-xl flex justify-center">
+            <FaMicroblog size={30} />
+            <span className="hidden mobile-extra:inline mr-3 ml-3 sm:m-0">
+              velog link
+            </span>
+          </div>
+        </a>
+
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          className="mt-7 p-3 rounded-md border-2 border-[#182848] font-bold hover:text-white hover:bg-[#182848] duration-150 cursor-pointer"
+        >
+          둘러보기
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

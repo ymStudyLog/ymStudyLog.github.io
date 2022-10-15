@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Contact = () => {
+const Comment = () => {
   return (
-    <div name="contact" className="w-full h-screen">
+    <div name="comment" className="w-full h-screen">
       <div className="max-w-[600px] h-full mx-auto flex flex-col justify-center items-center">
-        {/* contact form */}
-        <div className='special:max-w-[280px]'>
+        {/* comment form */}
+        <div className="special:max-w-[280px]">
           <div className="mb-4">
             <h1 className="text-4xl font-bold border-b-4 border-[#182848] inline">
-              Contact
+              Comment
             </h1>
           </div>
           <form
@@ -47,4 +47,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Comment;
