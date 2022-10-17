@@ -8,10 +8,7 @@
     body{
         @apply font-[NanumSquare];
         @apply cursor-default;
-    }
-    li{
-        @apply py-2 px-4 rounded-full;
-        @apply cursor-pointer;
+        @apply box-border;
     }
     input{
         @apply p-2 border-2 border-[#182848] ml-1 rounded-lg;

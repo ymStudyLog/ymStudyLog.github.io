@@ -35,7 +35,7 @@ const Navbar = () => {
             duration={500}
             offset={-20}
           >
-            <li className="text-3xl mx-2 my-4 hover:border-[#182848] hover:bg-[#182848] hover:text-white duration-150">
+            <li className="text-3xl mx-2 my-4 hover:border-[#182848] hover:bg-[#182848] hover:text-white duration-150 py-2 px-4 rounded-full cursor-pointer">
               Home
             </li>
           </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
           >
-            <li className="my-4 text-3xl mx-2 hover:border-[#182848] hover:bg-[#182848] hover:text-white duration-150">
+            <li className="my-4 text-3xl mx-2 hover:border-[#182848] hover:bg-[#182848] hover:text-white duration-150 py-2 px-4 rounded-full cursor-pointer">
               Projects
             </li>
           </Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
             duration={500}
             offset={20}
           >
-            <li className="my-4 text-3xl mx-2 hover:border-[#182848] hover:bg-[#182848] hover:text-white duration-150">
+            <li className="my-4 text-3xl mx-2 hover:border-[#182848] hover:bg-[#182848] hover:text-white duration-150 py-2 px-4 rounded-full cursor-pointer">
               Comment
             </li>
           </Link>

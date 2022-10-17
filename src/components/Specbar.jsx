@@ -1,16 +1,15 @@
 import React from 'react';
 
-const Specbar = () => {
+const Specbar = ({ spec }) => {
   return (
-    <div className="w-[50px] px-2 gap-y-3 flex flex-col justify-center items-center bg-slate-400">
-      <span className="w-[30px] h-[30px] bg-red-500"></span>
-      <span className="w-[30px] h-[30px] bg-red-500"></span>
-      <span className="w-[30px] h-[30px] bg-red-500"></span>
-      <span className="w-[30px] h-[30px] bg-red-500"></span>
-      <span className="w-[30px] h-[30px] bg-red-500"></span>
-      <span className="w-[30px] h-[30px] bg-red-500"></span>
-      <span className="w-[30px] h-[30px] bg-red-500"></span>
-      <span className="w-[30px] h-[30px] bg-red-500"></span>
+    <div className="max-w-[60px] px-1 gap-3 flex flex-col justify-center items-center bg-slate-200 rounded-tl-lg rounded-bl-lg">
+      {spec?.map((item, index) => {
+        return (
+          <div key={index} className="min-h-[40px] px-1 bg-[#182848] rounded-lg flex justify-center items-center text-sm text-white break-all">
+            <span>{item}</span>
+          </div>
+        );
+      })}
     </div>
   );
 };
