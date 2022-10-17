@@ -4,7 +4,6 @@ const Comment = () => {
   return (
     <div name="comment" className="w-full h-screen">
       <div className="max-w-[600px] h-full mx-auto flex flex-col justify-center items-center">
-        {/* comment form */}
         <div className="special:max-w-[280px]">
           <div className="mb-4">
             <h1 className="text-4xl font-bold border-b-4 border-[#182848] inline">

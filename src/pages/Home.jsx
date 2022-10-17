@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { FaMicroblog } from 'react-icons/fa';
-import {
-  BsCheck2,
-  BsDownload,
-  BsEnvelope,
-} from 'react-icons/bs';
+import { BsCheck2, BsPaperclip, BsLink45Deg } from 'react-icons/bs';
 
 const Home = () => {
   const [copy, setCopy] = React.useState(false);
@@ -35,33 +30,33 @@ const Home = () => {
         </h1>
 
         <div className="text-xl flex items-center mt-3">
-          <BsEnvelope size={30} />
-          <span className="hidden mobile-extra:inline mr-3 ml-3 sm:m-0">
-            ylee585@gmail.com
+          Email
+          <span className="hidden mobile-extra:inline mr-2 ml-2 sm:m-0">
+            : ylee585@gmail.com
           </span>
-          <BsDownload
-            className="cursor-pointer ml-2 mobile-extra:ml-0"
+          <BsPaperclip
+            size={30}
+            className="cursor-pointer ml-2 mobile-extra:ml-0 rotate-45 relative after:absolute after:bg-white after:w-[10px] after:h-[10px]"
             onClick={() => {
               onhandleClick('ylee585@gmail.com');
             }}
           />
-          {copy && <BsCheck2 size={30} className="ml-3 text-green-500" />}
+          {copy && <BsCheck2 size={30} className="ml-2 text-green-500" />}
         </div>
 
-        <a href="https://velog.io/@zldzhd9292" className="mt-3">
-          <div className="text-xl flex justify-center">
-            <FaMicroblog size={30} />
-            <span className="hidden mobile-extra:inline mr-3 ml-3 sm:m-0">
-              velog link
-            </span>
-          </div>
-        </a>
+        <div className="text-xl flex items-center mt-3">
+          velog
+          <span className="hidden mobile-extra:inline ml-2 sm:m-0">: link</span>
+          <a href="https://velog.io/@zldzhd9292" className="ml-2">
+            <BsLink45Deg size={30} />
+          </a>
+        </div>
 
         <Link
           to="projects"
           smooth={true}
           duration={500}
-          className="mt-7 p-3 rounded-md border-2 border-[#182848] font-bold hover:text-white hover:bg-[#182848] duration-150 cursor-pointer"
+          className="mt-7 p-3 rounded-md border-2 border-[#182848] font-bold hover:text-white hover:bg-[#182848] duration-150 cursor-pointer animate-bounce"
         >
           둘러보기
         </Link>

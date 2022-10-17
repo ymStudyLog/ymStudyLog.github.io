@@ -1,117 +1,157 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { BsJournals, BsGithub, BsHouseDoor } from 'react-icons/bs';
-import { GoComment } from 'react-icons/go';
-import TopButton from './TopButton';
+import {
+  BsJournals,
+  BsGithub,
+  BsHouseDoor,
+  BsArrowLeftCircle,
+  BsPencilSquare,
+} from 'react-icons/bs';
 
-//리모콘 메뉴를 고정하게 하는 기능도 구현하기
+//TODO 직접 스크롤 이동할 때도 감지해서 isClicked 활성화하기
 const Sidebar = () => {
-  const [isOpenFull, setIsOpenFull] = React.useState(false);
-  const [isFixed, setIsFixed] = React.useState(false);
+  const [isOpenFull, setIsOpenFull] = React.useState(false); 
+  const [isFixed, setIsFixed] = React.useState(false); 
   const [isClicked, setIsClicked] = React.useState({
     home: false,
     projects: false,
     comment: false,
   });
 
+  //TODO map 만들어서 반복 로직 제거
   const tempFix = (props) => {
     return props
-      ? `hidden tablet:flex w-[200px] flex-col items-start justify-center px-6 py-10 fixed top-[30%] right-0 mr-[15px] bg-[#182848] rounded-3xl`
-      : `hidden tablet:flex w-[200px] flex-col items-start justify-center px-6 py-10 fixed top-[30%] right-0 mr-[-130px] hover:mr-[15px] duration-500 bg-[#182848] rounded-3xl`;
+      ? `hidden tablet:flex w-[200px] flex-col items-start justify-center py-10 fixed top-[30%] right-0 bg-[#182848] rounded-3xl mr-[15px] `
+      : `hidden tablet:flex w-[200px] flex-col items-start justify-center py-10 fixed top-[30%] right-0 bg-[#182848] rounded-3xl mr-[-130px] hover:mr-[15px] duration-500`;
   };
 
   const tempColor = (props) => {
     return props
-      ? `mb-4 flex text-red-500 w-auto cursor-pointer`
-      : `mb-4 flex text-white w-auto cursor-pointer`;
+      ? `mb-4 flex w-full cursor-pointer text-red-500`
+      : `mb-4 flex w-full cursor-pointer text-white`;
   };
 
-  //사이드바 전체에 onMouseOver를 걸었으니 그 하위 요소들 이벤트 버블링 없애기
+  const tempRotate = (props) => {
+    return props
+      ? 'hover:transition-all ease-in-out duration-500 rotate-180'
+      : 'hover:transition-all ease-in-out duration-500 rotate-0';
+  };
+
+  const tempActivate = (props) => {
+    return props
+      ? 'w-1 rounded-tr-xl rounded-br-xl border-none bg-red-500 z-5'
+      : 'w-1 rounded-tr-xl rounded-br-xl border-none bg-[#182848] z-5';
+  };
+
   return (
     <div
-      onMouseOver={() => {
+      onMouseOver={(e) => {
+        e.stopPropagation();
         setIsOpenFull(true);
       }}
-      onMouseOut={() => {
-        setIsOpenFull(false);
-      }}
-      onClick={() => {
-        setIsFixed(true);
-      }}
-      onDoubleClick={() => {
-        setIsFixed(false);
+      onMouseOut={(e) => {
+        e.stopPropagation();
+        if (isFixed === false) {
+          setIsOpenFull(false);
+        }
       }}
       className={tempFix(isFixed)}
     >
-      <a
-        href="https://github.com/ymStudyLog"
-        className="mb-4 flex text-white w-auto cursor-pointer"
-      >
-        <BsGithub size={30} />
-        {isOpenFull && <span className="text-xl text-center ml-4">Github</span>}
-      </a>
+      <div className="mb-4 flex w-full cursor-pointer text-white">
+        <a
+          href="https://github.com/ymStudyLog"
+          className="flex ml-4"
+          onClick={() => {
+            setIsClicked({
+              home: false,
+              projects: false,
+              comment: false,
+            });
+          }}
+        >
+          <BsGithub size={30} />
+          {isOpenFull && (
+            <span className="text-xl text-center ml-4">Github</span>
+          )}
+        </a>
+      </div>
 
-      <Link
-        to="home"
-        smooth={true}
-        duration={500}
-        offset={-20}
-        className={tempColor(isClicked.home)}
+      {/*TODO 반복되는 요소 컴포넌트화 하기*/}
+      <div className={tempColor(isClicked.home)}>
+        <span className={tempActivate(isClicked.home)}></span>
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          offset={-20}
+          className="flex ml-3"
+          onClick={() => {
+            setIsClicked({
+              home: true,
+              projects: false,
+              comment: false,
+            });
+          }}
+        >
+          <BsHouseDoor size={30} />
+          {isOpenFull && <span className="text-xl text-center ml-4">Home</span>}
+        </Link>
+      </div>
+
+      <div className={tempColor(isClicked.projects)}>
+        <span className={tempActivate(isClicked.projects)}></span>
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          className="flex ml-3"
+          onClick={() => {
+            setIsClicked({
+              home: false,
+              projects: true,
+              comment: false,
+            });
+          }}
+        >
+          <BsJournals size={30} />
+          {isOpenFull && (
+            <span className="text-xl text-center ml-4">Projects</span>
+          )}
+        </Link>
+      </div>
+
+      <div className={tempColor(isClicked.comment)}>
+        <span className={tempActivate(isClicked.comment)}></span>
+        <Link
+          to="comment"
+          smooth={true}
+          duration={500}
+          offset={20}
+          className="flex ml-3"
+          onClick={() => {
+            setIsClicked({
+              home: false,
+              projects: false,
+              comment: true,
+            });
+          }}
+        >
+          <BsPencilSquare size={30} />
+          {isOpenFull && (
+            <span className="text-xl text-center ml-4">Comment</span>
+          )}
+        </Link>
+      </div>
+
+      <button
+        className="mt-4 ml-4 flex text-white w-auto cursor-pointer"
         onClick={(e) => {
-          e.stopPropagation();
-          setIsClicked({
-            home: true,
-            projects: false,
-            comment: false,
-          });
+          e.stopPropagation(); //TODO 다른 리모컨 버튼을 클릭했을 때 클릭이벤트가 한번 씹힘
+          setIsFixed(!isFixed);
         }}
       >
-        <BsHouseDoor size={30} />
-        {isOpenFull && <span className="text-xl text-center ml-4">Home</span>}
-      </Link>
-
-      <Link
-        to="projects"
-        smooth={true}
-        duration={500}
-        className={tempColor(isClicked.projects)}
-        onClick={(e) => {
-          e.stopPropagation();
-          setIsClicked({
-            home: false,
-            projects: true,
-            comment: false,
-          });
-        }}
-      >
-        <BsJournals size={30} />
-        {isOpenFull && (
-          <span className="text-xl text-center ml-4">Projects</span>
-        )}
-      </Link>
-
-      <Link
-        to="comment"
-        smooth={true}
-        duration={500}
-        offset={20}
-        className={tempColor(isClicked.comment)}
-        onClick={(e) => {
-          e.stopPropagation();
-          setIsClicked({
-            home: false,
-            projects: false,
-            comment: true,
-          });
-        }}
-      >
-        <GoComment size={30} />
-        {isOpenFull && (
-          <span className="text-xl text-center ml-4">Comment</span>
-        )}
-      </Link>
-
-      <TopButton />
+        <BsArrowLeftCircle size={30} className={tempRotate(isOpenFull)} />
+      </button>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Navbar = () => {
   const onhandleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-[96%] h-[80px] font-bold px-8 flex justify-between items-center rounded-3xl">
+    <div className="fixed w-[96%] h-[80px] font-bold px-8 flex justify-between items-center rounded-3xl z-10">
       <div className="inline-block text-3xl">YM</div>
 
       {/* Hamburger & close */}
@@ -65,7 +65,7 @@ const Navbar = () => {
             className="flex hover:scale-125 duration-200"
           >
             <button className="rounded-full mx-auto my-3">
-              <BsGithub size={40} className="hover:text-[#182848]"/>
+              <BsGithub size={40} className="hover:text-[#182848]" />
             </button>
           </a>
         </ul>

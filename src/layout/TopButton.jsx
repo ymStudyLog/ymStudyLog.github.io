@@ -14,7 +14,6 @@ const TopButton = () => {
       >
         <BsArrowUpCircle size={30} />
       </button>
-      {/* <span className="text-2xl text-center ml-4">Top</span> */}
     </div>
   );
 };
