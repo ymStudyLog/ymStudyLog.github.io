@@ -12,36 +12,31 @@ const Projects = () => {
   SwiperCore.use([Navigation, Pagination]);
 
   return (
-    <div name="projects" className="w-full h-screen">
-      <div className="max-w-[1000px] h-full mx-auto pb-[20px] flex justify-center items-center flex-col">
-        <div className="text-4xl font-bold border-b-4 mb-4 border-[#182848] mt-12">
+    <div name="projects" className="w-full h-auto">
+      <div className="max-w-[1000px] h-full mx-auto pb-[50px] flex justify-center items-center flex-col">
+        <div className="$midmobile:text-xl text-2xl tablet:text-4xl font-bold border-b-4 mt-12 mb-8 border-[#182848]">
           <h1>Projects</h1>
         </div>
 
         <Swiper
           style={{
-            width: '100%',
+            width: '90%',
             paddingBottom: '35px',
             zIndex: '0',
           }}
-          slidesOffsetBefore={50}
-          spaceBetween={50}
-          centeredSlides
           autoHeight={true}
           slidesPerView={1}
           pagination={{ clickable: true }}
           navigation={{}}
           loop={true}
         >
-          <div className="max-w-[450px] tablet:max-w-[900px]">
-            {projects.map((project) => {
-              return (
-                <SwiperSlide key={project.id}>
-                  <Card project={project} />
-                </SwiperSlide>
-              );
-            })}
-          </div>
+          {projects.map((project) => {
+            return (
+              <SwiperSlide key={project.id}>
+                <Card project={project} />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>

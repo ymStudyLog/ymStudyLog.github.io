@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
-// import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { BsGithub, BsList, BsXLg } from 'react-icons/bs';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { BsGithub } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 
+//TODO 햄버거 다른 요소에 겹쳐질 때 색상 바꾸는거
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const onhandleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-[96%] h-[80px] font-bold px-8 flex justify-between items-center rounded-3xl z-10">
-      <div className="inline-block text-3xl">YM</div>
+    <div className="fixed w-[96%] h-[50px] tablet:h-[80px] font-bold px-8 flex justify-between items-center rounded-3xl z-10">
+      <div className="inline-block text-2xl tablet:text-3xl">YM</div>
 
       {/* Hamburger & close */}
       <div
         onClick={onhandleClick}
         className="tablet:hidden cursor-pointer z-10"
       >
-        {nav ? <BsXLg size={30} /> : <BsList size={40} />}
+        {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30}/>}
       </div>
 
       {/* Mobile menu */}

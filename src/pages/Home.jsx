@@ -22,10 +22,10 @@ const Home = () => {
   return (
     <div name="home" className="w-full h-screen">
       <div className="max-w-[1000px] h-full mx-auto flex flex-col justify-center items-center">
-        <h1 className="text-2xl card:text-lg">
+        <p className="mx-[40px] tablet:mx-auto text-lg mobile:text-xl tablet:text-2xl">
           Aim to build simple applications and to deliver a better experience
-        </h1>
-        <h1 className="my-3 text-4xl font-bold card:text-2xl">
+        </p>
+        <h1 className="mx-[30px] tablet:mx-auto my-3 font-bold text-2xl mobile:text-4xl">
           React 개발자 이유미의 포트폴리오입니다.
         </h1>
 

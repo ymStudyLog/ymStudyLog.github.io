@@ -8,7 +8,6 @@ import {
   BsPencilSquare,
 } from 'react-icons/bs';
 
-//TODO 직접 스크롤 이동할 때도 감지해서 isClicked 활성화하기
 const Sidebar = () => {
   const [isOpenFull, setIsOpenFull] = React.useState(false); 
   const [isFixed, setIsFixed] = React.useState(false); 
@@ -21,8 +20,8 @@ const Sidebar = () => {
   //TODO map 만들어서 반복 로직 제거
   const tempFix = (props) => {
     return props
-      ? `hidden tablet:flex w-[200px] flex-col items-start justify-center py-10 fixed top-[30%] right-0 bg-[#182848] rounded-3xl mr-[15px] `
-      : `hidden tablet:flex w-[200px] flex-col items-start justify-center py-10 fixed top-[30%] right-0 bg-[#182848] rounded-3xl mr-[-130px] hover:mr-[15px] duration-500`;
+      ? `hidden tablet:flex w-[200px] flex-col items-start justify-center py-10 fixed top-[30%] right-0 bg-[#182848] rounded-3xl mr-[10px] `
+      : `hidden tablet:flex w-[200px] flex-col items-start justify-center py-10 fixed top-[30%] right-0 bg-[#182848] rounded-3xl mr-[-140px] hover:mr-[10px] duration-500`;
   };
 
   const tempColor = (props) => {
